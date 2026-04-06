@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-white dark:bg-surface-dark text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-accent-dark dark:text-accent;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-surface-card;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/60 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 dark:bg-white/5 border border-gray-200 dark:border-white/10;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-accent text-surface-dark font-semibold rounded-lg 
+           hover:bg-accent-dark transition-all duration-200 
+           hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 
+           active:translate-y-0 font-display tracking-wide;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-accent text-accent font-semibold rounded-lg 
+           hover:bg-accent/10 transition-all duration-200 
+           hover:-translate-y-0.5 active:translate-y-0 font-display tracking-wide;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 text-sm font-mono rounded-md 
+           bg-gray-100 dark:bg-white/5 
+           text-gray-700 dark:text-gray-300
+           border border-gray-200 dark:border-white/10
+           hover:border-accent/50 hover:text-accent transition-colors duration-200;
+  }
+
+  .nav-link {
+    @apply relative text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent 
+           font-display font-medium transition-colors duration-200 text-sm tracking-wide uppercase;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 rounded-full;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+/* Noise texture overlay */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated gradient bg */
+.hero-gradient {
+  background: radial-gradient(ellipse at 20% 50%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 100%, rgba(0, 212, 170, 0.04) 0%, transparent 50%);
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 30px rgba(0, 212, 170, 0.15), 0 0 60px rgba(0, 212, 170, 0.05);
+}
+
+/* Card hover glow */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 20px 60px rgba(0, 212, 170, 0.1), 0 0 0 1px rgba(0, 212, 170, 0.2);
+  transform: translateY(-4px);
+}
