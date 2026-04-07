@@ -56,7 +56,7 @@ export default function Hero() {
 
             <motion.div {...fadeUp(0.6)} className="flex items-center gap-4">
               <a
-                href="https://github.com/rahulkumar"
+                href="https://github.com/rahul031102"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-accent/10 hover:text-accent border border-transparent hover:border-accent/20 transition-all"
@@ -64,12 +64,12 @@ export default function Hero() {
                 <Github size={20} />
               </a>
               <a
-                href="mailto:rahul@example.com"
+                href="mailto:rahuld031102@gmail.com"
                 className="p-2.5 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-accent/10 hover:text-accent border border-transparent hover:border-accent/20 transition-all"
               >
                 <Mail size={20} />
               </a>
-              <span className="text-sm text-gray-500 dark:text-gray-500 font-mono">rahul@example.com</span>
+              <span className="text-sm text-gray-500 dark:text-gray-500 font-mono">rahuld031102@gmail.com</span>
             </motion.div>
           </div>
 

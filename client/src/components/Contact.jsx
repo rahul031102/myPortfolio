@@ -82,7 +82,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="font-semibold font-display text-sm">GitHub</p>
-                <p className="text-xs text-gray-500">@rahulkumar</p>
+                <p className="text-xs text-gray-500">@rahul031102</p>
               </div>
             </a>
           </motion.div>

@@ -1,0 +1,23 @@
+# 🔒 Environment files (NEVER push secrets)
+.env
+.env.*
+!*.env.example
+
+# 📦 Node modules
+node_modules/
+
+# 🛠 Logs
+logs
+*.log
+npm-debug.log*
+
+# 🧠 OS files
+.DS_Store
+
+# ⚡ Build folders
+dist/
+build/
+
+# 🔐 Optional (if using client env separately)
+client/.env
+server/.env
